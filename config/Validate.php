@@ -209,12 +209,10 @@ return $output;
         $mail->isSMTP();
         $mail->Host = "smtp.gmail.com"; // use smtp.example.com
         $mail->SMTPAuth = true;
-        $mail->Username = 'silverrakinzi@gmail.com';
-        $mail->Password = 'hkuoprecwgfnulkq';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
         $mail->isHTML(true);
-        $mail->setFrom('silverrakinzi@gmail.com', "Asset QR Code");
+        $mail->setFrom($email, "Asset QR Code");
         $mail->addAddress($email, '');
         $mail->Subject = 'ATTACHED IS YOUR DIGITAL ASSET QR CODE';
         $mail->Body = $msg;
